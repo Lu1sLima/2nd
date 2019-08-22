@@ -22,3 +22,29 @@ public class Main{
     return cont;
   }
 }
+
+
+//SEM VETOR
+public class Main{
+  public static void main(String[]args){
+    System.out.println(calculaSeq(20));
+
+  }
+
+  public static int calculaSeq(int num){
+    int soma = 0;
+    int cont = 0;
+    for(int i = 1; i < num; i++){
+      soma = i;
+      for(int j = i+1; j < num; j++){
+        soma += j;
+        if(soma == num){
+          cont++;
+          break;
+        }
+
+      }
+    }
+    return cont;
+  }
+}
