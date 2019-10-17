@@ -42,7 +42,9 @@ public class App {
                    // System.out.println("---------------");
                 }
                 else{
-
+                    if(pilha.size() == 0){
+                        return false;
+                    }
                     switch(s.charAt(i)){
                         case ']':
                             if(pilha.pop() != '['){
