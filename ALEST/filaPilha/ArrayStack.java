@@ -4,10 +4,10 @@ import java.util.EmptyStackException;
 public class ArrayStack {
 
     private int topo;
-    private Integer p[];
+    private char p[];
 
     public ArrayStack() {
-        p = new Integer[100];
+        p = new char[100];
         topo = 0;
     }
 
@@ -15,7 +15,7 @@ public class ArrayStack {
         return topo;
     }
 
-    public void push(Integer e) {
+    public void push(char e) {
         if (topo >= p.length) {
             throw new StackOverflowError();
         }
@@ -23,17 +23,17 @@ public class ArrayStack {
         topo++;
     }
 
-    public Integer pop() {
+    public char pop() {
         if (topo == 0) {
             throw new EmptyStackException();
         }
         topo--;
-        Integer aux = p[topo];
-        p[topo] = null;
+        char aux = p[topo];
+        p[topo] = ' ';
         return aux;
     }
 
-    public Integer top() {
+    public char top() {
         if (topo == 0) {
             throw new EmptyStackException();
         }
@@ -45,7 +45,7 @@ public class ArrayStack {
     }
 
     public void clear() {
-        p = new Integer[100];
+        p = new char[100];
         topo = 0;
     }
 }

@@ -17,13 +17,54 @@ public class App {
         // while (!stack.isEmpty()) {
         //     System.out.println(stack.pop());
         // }  
-        Deque deq = new Deque();
-        deq.addFirst(1);
-        deq.addFirst(2);
-        deq.addFirst(3);
-        deq.addFirst(4);
-        deq.addLast(999);
-        System.out.println(deq.removeLast());     
-        System.out.println(deq.getLast()); 
+        // Deque deq = new Deque();
+        // deq.addFirst(1);
+        // deq.addFirst(2);
+        // deq.addFirst(3);
+        // deq.addFirst(4);
+        // deq.addLast(999);
+        // System.out.println(deq.removeLast());     
+        // System.out.println(deq.getLast()); 
+
+
+            String teste = "(){[()]}[()()]";
+
+            System.out.println(verificaParenteses(teste));
+
     }
+    //LEMBRAR DO BREAK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        public static boolean verificaParenteses(String s){
+            ArrayStack pilha = new ArrayStack();
+            for(int i = 0; i < s.length(); i++){
+                if(s.charAt(i) == '{' || s.charAt(i) == '(' || s.charAt(i) == '['){
+                    pilha.push(s.charAt(i));
+                   // System.out.println(s.charAt(i)+", tam pilha="+pilha.size());
+                   // System.out.println("---------------");
+                }
+                else{
+
+                    switch(s.charAt(i)){
+                        case ']':
+                            if(pilha.pop() != '['){
+                                return false;
+                            }
+                            break;
+                        case '}':
+                        //System.out.println(s.charAt(i)+", tam pilha="+pilha.size());
+                            if(pilha.pop() != '{'){
+                                return false;
+                            }
+                            break;
+                        case ')':
+                            if(pilha.pop() != '('){
+                                return false;
+                            }
+                            break;
+                    }
+                }
+            }
+        
+        return true;
+    }
+
 }
