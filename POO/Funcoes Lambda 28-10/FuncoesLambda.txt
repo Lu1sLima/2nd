@@ -1,0 +1,23 @@
+Funcoes Lambda
+
+Linguagens de mais alta ordem:
+	Funções como objetos
+	Passagem de funções por parâmetro
+
+/////////////////executa(lista, lambda a,b: a+b)
+
+ Classes aninhadas anonimas
+
+Se eu tiver métodos muito simples
+
+printPerson(pessoas, (Pessoa p) É UMA INTERFACE Q SÓ TEM UMA FNCAO -> p.Gender() == Person.Sex.MALE);
+USAR A NOTAÇÃO
+
+*** Argumento do método -> e oq ele vai fazer
+@FunctionalInterface
+
+
+
+------------ da pra fazer sem interface
+ex: comparator
+poderia ter usado a function

@@ -1,0 +1,33 @@
+COnjuntos nao ordenados
+
+************************************** Sets **********************************************
+Conjunto é bom para eliminar repetidos.
+POSSO PASSAR COISAS NO CONSTRUTOR(ELES RECEBEM COLLECTION POR PARÂMETRO)
+Contains é O(1)
+HashSet e TreeSet
+TreeSet: pode ordenar seguindo algum critério
+
+Cntains em conjunto usa Hash, e vira O(1)
+em Lista, ele é O(n)
+
+O que é um HashSet?
+
+ * Se nao preciso de Ordem
+Exemplo do estacionamento:
+	- Array com linkedList dentro de cada posicao
+
+O que é uma TreeSet? (Não é tão eficiente quanto o Hash)
+ * Se preciso de Ordem (Crescente ou Decrescente ele é bom).
+ 	------ SÓ ACEITAM QUEM IMPLEMENTA COMPARABLE -------	
+	- Raiz: guarda o primeiro elemento
+	- Oq é menor manda pra esquerda, e maior manda pra direita
+	- Número máximo de testes é o nível da Árvore
+
+******************************************************************************************
+trens usar map
+Maps:
+Associar chave com valor
+Ex: Código da locomotiva contra a locomotiva
+Objeto com outro Objeto
+Map <Objeto1, Objeto2> nome = new HashMap<>();
+//       //         //      = new TreeMap<>();
