@@ -1,0 +1,6 @@
+pra montar a cena: definir características básicas
+
+
+gerenciadores de layout:  
+gridPane() divide a tela em colunas e linhas imaginárias
+colunas | linhas
