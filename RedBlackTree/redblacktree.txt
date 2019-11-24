@@ -1,0 +1,6 @@
+https://algs4.cs.princeton.edu/33balanced/
+https://github.com/adillson/redblack/edit/master/README.md
+https://algs4.cs.princeton.edu/33balanced/RedBlackBST.java.html
+http://btechsmartclass.com/data_structures/red-black-trees.html
+https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/st-redblack.html
+https://csegeek.com/csegeek/view/tutorials/algorithms/trees/tree_part3.php

@@ -279,8 +279,20 @@ public class BinarySearchTreeOfInteger {
      * @return altura da arvore
      */    
     public int height() {        
-        //Implemente este metodo (de preferencia de forma recursiva)
-        return 0;
+        return height(root);
+    }
+
+    private int height(Node n){
+        if(n == null){
+            return -1;
+        }
+        int left = height(n.left);
+        int right = height(n.right);
+        int biggest = left;
+        if(right >= biggest){
+            biggest = right;
+        }
+        return 1 + Math.max(height(n.left), height(n.right));
     }
     
     /** 
@@ -353,6 +365,43 @@ public class BinarySearchTreeOfInteger {
         return true;
 
     }
+
+    public int countLeaves(){
+        return countLeaves(root);
+    }
+
+    private int countLeaves(Node n){
+        if(n == null){
+            return 0;
+        }
+        if(n.left == null && n.right == null){
+            return 1;
+        }
+        return countLeaves(n.left)+countLeaves(n.right);
+    }
+
+    public double average(){
+        if(root == null){
+            return 0;
+        }
+        return average(root)/count;
+    }
+
+    private double average(Node n){
+        // double left = 0;
+        // double right = 0;
+    
+        if(n == null){
+            return 0;
+        }
+        // if(n.left != null){
+        //     left = average(n.left);
+        // }
+        // if(n.right != null){
+        //     right = average(n.right);
+        // }
+        return n.element+average(n.left)+average(n.right);
+    }
     
     /**
      * Retorna o nivel do nodo no qual esta armazenado o elemento
@@ -362,9 +411,19 @@ public class BinarySearchTreeOfInteger {
      * encontrou o elemento.
      */
     public int level(Integer element) {
-        //Implemente este metodo
-        return 0;
+        Node n = searchNodeRef(element, root);
+        if(n == null){
+            return -1;
+        }
+        return level(n);
     }    
+
+    private int level(Node n){
+        if(n == null || n == root){
+            return 0;
+        }
+        return 1+level(n.father);
+    }
     
     /** 
      * Retorna uma string que contem todos os elementos da arvore na ordem de 
